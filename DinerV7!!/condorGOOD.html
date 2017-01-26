@@ -1,0 +1,49 @@
+
+<html>
+ 
+  
+   <head>
+    <title>Birdie
+	
+	</title>
+ <script type="text/javascript">  
+function validate(){  
+var namett=document.getElementById('selection').value; 
+
+  
+if (namett=="select actor"){  
+  alert("Whatever Dude"); 
+  
+  return false;  
+} 
+else if (namett=="Inquiry4"){  
+  alert("Now Now!!!!");  
+  return false; 
+  }
+  return true;  
+  }  
+
+</script>
+  </head>
+ 
+
+
+ <body align="center"> 
+<form name="form1" onsubmit="return validate()" action="abc.jsp>  
+	<p> <span style="padding-left:75px"> Email : <input type="text" name="EMail">	</span>  </p> 
+
+	<p> 
+	 Reason for Inquiry:  
+	<select id="selection">                   
+<option value="select actor">Select Actor</option>
+<option value="Inquiry4">Private Party</option>
+<option >Feedback</option>
+<option >Other</option>
+</select>  <span style="padding-right:9%"> </span> </p> 
+
+
+<input type="submit" value="register"> 
+</form>  
+   </body>
+
+</html>

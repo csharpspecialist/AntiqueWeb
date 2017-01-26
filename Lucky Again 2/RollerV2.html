@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rolling The Dice  </title>
+  <script type="text/javascript">  
+// set this to whatever your starting balance should be
+var balance = 0;
+
+function roll() {
+  // get the current bet from the value property of the input
+  
+  var die1 = Math.floor(Math.random()*6+1);
+  var die2 = Math.floor(Math.random()*6+1);
+  
+  // figure out if they win or lose money, change the balance variable accordingly
+  
+  // update this to provide a message about win or loss
+  document.getElementById("message").innerHTML= "You rolled a " + (die1 + die2);
+};
+
+function getbalance() {
+	document.getElementById("message").innerHTML= "Your balance is: $" + balance;
+};
+
+function getbetAmount() {
+	document.getElementById("bet").innerHTML= "Your bet is: $" + bet;
+};
+  </script>
+</head>
+<body>
+
+<h1>
+  Lucky Sevens
+</h1>
+<form id="lucky">
+  <p>
+    What is the amount you would like to bet?
+    <input type="text" id="bet" name="bet" />
+  </p>
+  <table>
+    <tr>
+      <td>
+        <button type="button" onclick="getbalance()"> 
+          Check Balance
+        </button>
+      </td>
+      <td>
+        <button type="button" onclick="roll()">
+          Roll
+        </button>
+      </td>
+	      <td>
+        <button type="button" onclick="getbetAmount()"> 
+          Check Bet Amount
+        </button>
+      </td>
+    </tr>
+  </table>
+</form>
+<p id="message">  </p>
+<p id="bet">  </p>
+
+</body>
+</html>

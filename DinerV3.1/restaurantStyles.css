@@ -1,0 +1,48 @@
+
+
+
+#footer{
+	background-color:gray;
+}
+
+#nice {
+	font-family: times, serif;
+   font-style: italic;
+   font-weight: bold;
+}
+
+#First {
+  color: #FA9C06;
+}
+
+
+#ocean {
+  color: #346EE2;
+  font-weight: bold;
+}
+
+h3 {
+    color: maroon;
+    margin-left: 40px;
+}
+
+
+ul {
+    color: green;
+    margin-left: 10px;
+}
+
+td {
+    color: #DC143C;
+    margin-left: 2px;
+}
+
+
+
+
+
+
+
+
+
+

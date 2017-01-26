@@ -1,0 +1,23 @@
+
+body {font-size: medium;
+	font-family: Serif;
+	background-color: #ccccff;
+	color: white;}
+
+
+h1{font-size: XX-large;
+	font-family: Serif;
+	text-align: center;
+	color: #9933cc;}
+
+p {text-indent: 1em;
+	text-align: justify;
+	background-color: black;
+	line-height: 150;}
+
+th{font-size: X-large;
+	font-family: Serif;
+	text-align: center;
+	}
+
+

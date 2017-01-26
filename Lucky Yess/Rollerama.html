@@ -1,0 +1,157 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+        
+    <title>  Feeling Lucky </title>
+    <link href="prac.css" rel="stylesheet" type="text/css" />
+
+      
+    
+    <script type="text/javascript">
+      //declaring variables to be used
+      var INITIAL;
+      var diceOne;
+      var diceTwo;
+      var rolls = 0;
+      var maxMoney = 0;
+      var maxRolls = 0;
+      var clicks = 0;
+      
+
+      //hides results table
+      function atLoad() {
+        var resultDiv = document.getElementById("result");
+        resultDiv.style.display = "none";
+      }
+
+      //occurs when play button has been clicked
+      function start() {
+        var startBet = getAmount();
+        
+         clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+
+        //runs while at least 1 dollar remains
+        while (startBet >= 1) {
+          //checks to see if current amount is greater than max earnings
+          if (startBet > maxMoney) {
+            maxMoney = startBet;
+            maxRolls = rolls;
+          }
+          //rolls dice
+          diceOne = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+          diceTwo = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+          var total = diceOne + diceTwo;
+          if (total == 7) {
+            startBet += 4;
+          } else {
+            startBet -= 1;
+          }
+
+          rolls++;
+        }
+
+        //displays and inserts text into the results table
+        document.getElementById("result").style.display = "block";
+        document.getElementById("startBet").innerHTML = INITIAL;
+        document.getElementById("rollCount").innerHTML = rolls;
+        document.getElementById("maxWin").innerHTML = "$" + maxMoney;
+        document.getElementById("cashMaxRoll").innerHTML = maxRolls;
+      }
+
+      //gets the amount and formats it for use out of the text box
+      function getAmount() {
+        var startBetTemp = document.getElementById("bet").value;
+        INITIAL = startBetTemp;
+        if (startBetTemp[0] == "$") {
+          startBetTemp = startBetTemp.substring(1, startBetTemp.length)
+        }
+        startBetTemp = startBetTemp.trim();
+        return startBetTemp
+      }
+
+    </script>
+  </head>
+
+  <body onload="atLoad();">
+    <h2 style="text-align: center" class="blinker" >Lucky Sevens</h2>
+
+    <form action="index.html" method="GET">
+      <div style="width: 100%; text-align: center" id="big" >
+        Starting Bet:
+        <input type="text" id="bet" placeholder="$0.00"  style="width: 80px; height: 26px" ></input>
+        <br>
+        <br>
+        <input type="button" value="Play" onclick="start();" style="width: 180px; height: 120px" class="blinker"  >
+      </div>
+    </form>
+
+    <br>
+
+    <!--Results Display-->
+    <div id="result" style="display: block; width: 100%; text-align: center; display: block">
+      <h1 style="text-decoration: underline;">Results of Your Night Out</h1>
+      <table style="margin-left: auto;margin-right: auto">
+        <tr>
+          <th class="wish"> Starting Bet: </th>
+          <th class="wish" ><span id="startBet"></span></th>
+        </tr>
+        <tr>
+          <td id="name"> Total Rolls Before You Tapped Out: </td>
+          <td id="name" ><span id="rollCount"></span></td>
+        </tr>
+        <tr>
+          <td class="hero" > Highest Dollar Amount Won: </td>
+          <td class="hero"  ><span id="maxWin"></span></td>
+        </tr>
+        <tr>
+          <td class="clear"> Roll Count at Highest Amount Won: </td>
+          <td class="clear" ><span id="cashMaxRoll"></span></td>
+        </tr>
+         <tr>
+          <td class="clear"> # of Times That You Have Played: </td>
+          <td class="clear" ><span id="clicks"></span></td>
+        </tr>
+        
+        
+      </table>
+    </div>
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

@@ -1,0 +1,84 @@
+
+<html>
+ 
+  
+   <head>
+    <title>Working Man
+	
+	</title>
+ <script> 
+		 
+		function validateform(){  
+		var namett=document.myform.forname.value;  
+		var password=document.myform.password.value;  
+		var result = document.getElementById('reasons').value;
+		var elem ;	
+		var hiddenDiv
+		
+		if (namett==null || namett==""){  
+		  alert("Name can't be blank");  
+		  return false;  
+		}else if(password.length<6){  
+		  alert("Password must be at least 6 characters long.");  
+		  return false;  
+		  } 
+		else if (result=="inquiry1") {
+		alert("not now") ;
+		return false;
+		} 
+		else if (result=="inquiry2") {
+		alert("holly Cow") ;
+		return false;
+		}
+		else if (result=="inquiry3") {
+		alert("whatever!!!") ;
+		return false;
+		} 
+		
+		else if (result=="inquiry4") {
+		//alert("whatever!!!") 
+		elem = document.getElementById("selection");
+			elem.onchange = function(){
+			hiddenDiv = document.getElementById("showMe");
+			hiddenDiv.style.display = (this.value == "") ? "none":"block";
+		};
+		return false;
+		}
+/*
+	 function dude() {
+		 if( document.myForm.reasons.value == "inquiry4" )
+		  elem = document.getElementById("selection");
+			elem.onchange = function(){
+			hiddenDiv = document.getElementById("showMe");
+			hiddenDiv.style.display = (this.value == "") ? "none":"block";
+		};
+		} 
+  */
+		return true;
+		}  
+</script>  
+<body>  
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+Name: <input type="text" name="forname"><br/>  
+Password: <input type="password" name="password"><br/>  
+<input type="submit" value="register"> 
+
+	<p>
+	 Reason for Inquiry:  
+	<select id="reasons">                   
+<option value="inquiry1">Catering</option>
+<option value="inquiry2">Private Party</option>
+<option value="inquiry3">Feedback</option>
+<option value="inquiry4">Other</option>
+</select>  <span style="padding-right:9%"> </span>  </p>
+
+<p>You wrote: <span id='showMe'></span> </p> 
+ <p>  <span style="padding-left:150px">	<input type="button" onclick="dude()" value="Way"> </p> 
+	</p> 
+
+ 
+</form>  
+   </body>
+
+</html>
+

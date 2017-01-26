@@ -1,0 +1,163 @@
+
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+<title>  Whatever!!!   </title>
+
+
+</head>
+
+ <script type="text/javascript"> 
+ var bank = document.getElementById("bank").innerHTML = money;
+ var result;
+ var Date;
+ var talk;
+ var between;
+ 
+	function marksgrade()  
+		{  
+		grade = document.form1.text1.value;  
+		switch (grade)  
+		{  
+	case 'A+': alert("Marks >= 90"); break;  
+	case 'A' : alert("Marks [ >= 80 and <90 ]"); break;  
+	case 'B+': alert("Marks [ >= 70 and <80 ]") ;break;  
+	case 'B' : alert("Marks [ >= 60 and <70 ]");	break;  
+	case 'C' : alert("Marks < 60"); break;  
+	default: alert("Wrong grade.........");  
+	}  
+} 
+
+<script>
+function myFunction() {
+    var text;
+    var fruits = document.getElementById("myInput").value;
+
+    switch(fruits) {
+        case "Banana":
+            text = "Banana is good!";
+	    break;
+        case "Orange":
+	    text = "I am not a fan of orange.";
+	    break;
+        case "Apple":
+	    text = "How you like them apples?";
+	    break;
+        default:
+	    text = "I have never heard of that fruit...";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+
+
+function showAnswer( qNumber ){
+    switch (qNumber){
+        case 5 : alert('Lets Get Ready To Rumble!!'); break;
+        case 2 : alert('Time For Tea'); break;
+        case 3 : alert('We Go Hard!!!'); break;
+        case 4 : alert('NBA Gametime!!!'); break;
+        default : alert('sorry there was an error in program');
+    }
+}
+
+	function checkout()  
+		{  
+		talk = document.form1.reasons.value;  
+		switch (talk)  
+		{  
+	case 'inquiry1': alert("Please Make A Selection"); break;  
+	case 'inquiry2' : alert("No Way"); break;  
+	case 'inquiry3': alert("Colateral") ;break;  
+	case 'inquiry4' : alert("Can U Smell What The Rock..");	break;  
+	case 'inquiry5' : alert("GiddyUp!!"); break;  
+	default: alert("Not A Valid Selection");  
+	}  
+} 
+
+
+
+
+
+</script>
+ 
+ 
+ 
+ <body>  
+<h1>JavaScript : switch statement</h1>  
+<form name="form1" action ="#">  
+Input Grade type : <input type="text" name="text1" value="A" />  
+<br /><br />  
+
+
+
+Banana : <input type="text" name="myInput" value="A" />  
+<br /><br /> 
+<input type="button" value="Marks check"  
+onclick='marksgrade()' /> 
+
+<input type="button" value="Bullseye!!"  
+onclick='berzerk()' /> 
+
+<p>Q : 1</p>
+<button class="lbutton" onclick="showAnswer(5)">Answer</button>
+
+<p>Q : 2</p>
+<button class="lbutton" onclick="showAnswer(2)">Answer</button>
+
+<p>Q : 3</p>
+<button class="lbutton" onclick="showAnswer(3)">Answer</button>
+
+<p>Checking Up On You!!</p>
+<button class="lbutton" onclick="checkout()"> Checker</button>
+
+<p>Big Gunns!</p>
+<button onclick="myFunction()">Try it</button>
+
+
+
+	<p>
+	 Reason for Inquiry:  
+	<select name="reasons">                   
+<option value="inquiry1">Choose An Option</option>
+<option value="inquiry2">Private Party</option>
+<option value="inquiry3">Feedback</option>
+<option value="inquiry4">Awsome!!</option>
+<option value="inquiry5">Forget IT</option>
+<option value="inquiry6">Game Time??</option>
+</select>  <span style="padding-right:9%"> </span>  </p>
+ 
+ 
+<p>You wrote: <span id='talk'></span> </p>  <!-- theInput winds up here!!! -->
+
+ <h2>Winnings: <h2 $ id="bank"></h2></h2>
+ 
+ <h2>No Way: <h2 $ id="fruits"></h2></h2>
+ 
+  <h2>Fruits: <h2 $ id="demo"></h2></h2>
+
+ 
+</form>  
+
+</body>  
+</html>  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

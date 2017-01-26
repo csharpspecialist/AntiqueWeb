@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Nice!!!  </title>
+
+</head>
+
+
+
+<script>
+function myFunction() {
+    var words;
+    var fruits = document.getElementById("myInput").value;
+
+    switch(fruits)
+	{
+       	case "banana":
+		case "Banana":
+            words = "Bananas are good!";
+			alert("Bless You!!");
+	    break;
+        case "Orange":
+		 case "orange":
+	    words = "I am not a fan of orange.";
+	    break;
+        case "Apple":
+		case "apple":
+	    words = "How you like them apples?";
+	    break;
+        default:
+	    words = "I have never heard of that fruit...";
+    }
+    document.getElementById("words").innerHTML = words;
+}
+</script>
+
+
+
+<body>
+
+<p>Write Banana, Orange or Apple in the input field and click the button.</p>
+<p>The switch statement will execute a block of code based on your input.</p>
+
+<input id="myInput" type="text">
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="words"></p>
+</body>
+</html>
+
+
+
+
+

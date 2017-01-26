@@ -1,0 +1,69 @@
+
+
+
+a:link  {
+
+color: #660099;
+
+}
+
+
+a:visited  {
+
+color:green;
+
+}
+a:hover  {
+
+color:black;
+font-weight: bold;
+}
+
+a:active{
+	text-decoration: none; 
+	
+}
+
+#footer{
+	background-color:gray;
+}
+
+#nice {
+	font-family: times, serif;
+   font-style: italic;
+   font-weight: bold;
+}
+
+#First {
+  color: #FA9C06;
+}
+
+
+#name {
+  color: #346EE2;
+}
+
+h3 {
+    color: maroon;
+    margin-left: 40px;
+}
+
+
+ul {
+    color: green;
+    margin-left: 10px;
+}
+
+td {
+    color: #DC143C;
+    margin-left: 2px;
+}
+
+
+
+
+
+
+
+
+

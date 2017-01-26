@@ -1,0 +1,57 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  <script type="text/javascript">
+
+	function diceRoller(){
+		var x = document.getElementById("startingBet").value;
+		var a = Math.floor((Math.random() * 6) + 1);
+		var b = Math.floor((Math.random() * 6) + 1);
+		var total = a + b;
+		if (total == 7){
+			document.getElementById("totalCash").innerHTML=x + 4;
+		}else {
+			document.getElementById("totalCash").innerHTML=x - 1;
+		}
+	}
+    </script>
+  </head>
+
+<body onload="hideResults()">
+	<center><h1>Lucky Sevens</h1></center>
+	<br>
+	<center>Starting Bet: <input type="number" name="startingBet" id="startingBet" placeholder="$0.00">
+	<center><p>$<span id="totalCash"></span></p></center>
+	<center><button onclick="diceRoller()" style="height: 80px; width: 200px"><font size="4">PLAY</font></button></center>
+	<br>
+	<div id="results" align="center" background-color="blue">
+		<table id="resultTable" align="center" border="1" width="40%">
+		<caption><font size="6">Results</font></caption>
+		<tr>
+			<th align="left">Starting Bet</th>
+			<th id="startingBetCell"></th>
+		</tr>
+		<tr>
+			<td>Total Rolls Before Going Broke</td>
+			<td id="totalRollsCell"></td>
+		</tr>
+		<tr>
+			<td>Highest Amount Won</td>
+			<td id="highAmountCell"></td>
+		</tr>
+		<tr>
+			<td>Roll Count at Highest Amount Won</td>
+			<td id="rollCountCell"></td>
+		</tr>
+		</table>
+	</div>
+</body>
+
+
+
+

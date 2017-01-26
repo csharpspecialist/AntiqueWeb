@@ -1,0 +1,89 @@
+/*
+.blinker {
+  animation: blinker 1s linear infinite;
+  font-weight: bold;   }
+
+@keyframes blinker {
+  50% { opacity: 0.0;  }   }
+  ---------------------------------------
+
+
+a:link  { color: #660099;  }
+
+a:visited  { color:green; }
+a:hover  {color:black; font-weight: bold; font-size: 22px;}
+
+a:active{  text-decoration: none; }
+---------------------------------------------
+#footer{ background-color:gray; }
+
+
+#nice { font-family: times, serif; font-style: italic;
+   font-weight: bold; font-size:16pt }
+
+.clear { color:#FA5F06; font-size: 30px; }
+
+
+#name { color: #346EE2; }
+
+
+#red  { color:red;}
+
+
+#space { margin-left: 90px; }
+
+
+h3 { color: #DC143C; }
+
+
+ul { color: green;  margin-left: 10px; }
+
+
+td { color: #DC143C; margin-left: 2px; }
+
+
+th, thead { text-align: center; margin-left: 2px; }
+
+
+#big{ font size: 16px; }
+*/
+
+#img img {
+width:50%;
+height:50%;
+position:absolute;
+top:0;
+left:0;
+
+}
+
+#Snav {
+
+display:block;
+width:50%;
+height:50%;
+position:absolute;
+top:0;
+left:0;
+
+}
+
+#SnavUp   {
+
+display:block;
+width:50%;
+height:20%;
+
+}
+
+
+#SCircles   {
+background-color:red;
+display:block;
+width:5%;
+height:15%;
+margin-right:5%
+float:right;
+}
+
+

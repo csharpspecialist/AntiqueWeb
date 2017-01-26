@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Lucky Sevens</title>
+    <script type="text/javascript">
+      //declaring vars
+      
+      var die1;
+      var die2;
+      var rolls = 0;
+	  var startup;
+      var topDollar = 0;
+      var maxRolls = 0;
+
+      //hides results table
+      function atLoad() {
+        var resultDiv = document.getElementById("final");
+        resultDiv.style.display = "none";
+      }
+
+      //starts the excitement!!!
+      function start() {
+        var wager = getAmount();
+
+        //runs while at least 1 dollar remains
+        while (wager >= 1) {
+          //checks to see if current amount is greater than max earnings
+          if (wager > topDollar) {
+            topDollar = wager;
+            maxRolls = rolls;
+          }
+          //rolls dice
+          die1 = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+          die2 = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+          var sum = die1 + die2;
+          if (sum == 7) {
+            wager += 4;
+          } else {
+            wager -= 1;
+          }
+
+          rolls++;
+        }
+
+        //displays and inserts text into the results table
+        document.getElementById("final").style.display = "block";
+        document.getElementById("wager").innerHTML = startup;
+        document.getElementById("rollCount").innerHTML = rolls;
+        document.getElementById("maxWin").innerHTML = "$" + topDollar;
+        document.getElementById("rollAtMax").innerHTML = maxRolls;
+      }
+
+      //gets the amount and formats it for use out of the text box
+      function getAmount() {
+        var startBetTemp = document.getElementById("bet").value;
+        startup = startBetTemp;
+        if (startBetTemp[0] == "$") {
+          startBetTemp = startBetTemp.substring(1, startBetTemp.length)
+        }
+        startBetTemp = startBetTemp.trim();
+        return startBetTemp
+      }
+
+    </script>
+  </head>
+
+  <body onload="atLoad();">
+    <h2 style="text-align: center">Lucky Sevens</h2>
+
+    <form action="index.html" method="GET">
+      <div style="width: 100%; text-align: center">
+        Starting Bet:
+        <input type="text" id="bet" placeholder="$0.00"></input>
+        <br>
+        <br>
+        <input type="button" value="Play" onclick="start();" style="width: 100px; height: 50px">
+      </div>
+    </form>
+
+    <br>
+
+    <!--This is the results table-->
+    <div id="final" style="display: block; width: 100%; text-align: center; display: block">
+      <h2 style="text-decoration: underline;">Results</h2>
+      <table style="margin-left: auto;margin-right: auto">
+        <tr>
+          <th>Starting Bet</th>
+          <th><span id="wager"></span></th>
+        </tr>
+        <tr>
+          <td>Total Rolls Before Going Broke</td>
+          <td><span id="rollCount"></span></td>
+        </tr>
+        <tr>
+          <td>Highest Amount Won</td>
+          <td><span id="maxWin"></span></td>
+        </tr>
+        <tr>
+          <td>Roll Count at Highest Amount Won</td>
+          <td><span id="rollAtMax"></span></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+
+</html>

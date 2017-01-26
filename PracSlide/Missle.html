@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html>
+
+<head>
+
+
+	<link rel="shortcut icon" href="Photos/BrowniesHamburgerStand.jpg"/>
+
+
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>  SlideShow!!!!</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	<link href="guide.css" rel="stylesheet" type="text/css" />
+	<script src="js/bootstrap.min.js"></script>
+	<title id="nice"> Pics for the People!!!! </title>
+
+
+</head>
+
+
+<style>
+
+</style>
+<body>
+
+<script type="text/javascript">
+
+		var Image = new Array("Photos/Adele.jpg", "Photos/bmw_i8.jpg" , "Photos/bmw_i8 2.jpg")
+		var Image_number = 0;
+     	var Image_Length = Image.Length - 1;
+
+     	function change_image(num ) {
+ 		Image_number = Image_number + num;
+
+
+if (Image_number > Image_Length)  {
+
+      Image_number = 0;
+
+      }
+
+	if(Image_number < 0){
+	 Image_number = Image_Length;
+	 }
+
+	 document.slideshow.src= Image[Image_number];
+	 return false;
+	 }
+	 function auto()  {
+	 	setInterval ( "change_image(1)", 2000);
+ 	}
+
+
+</script>
+
+
+
+<image src="Photos/Adele.jpg" name="slideshow" />
+<table>
+
+	<tr>
+		<td align="left">  <a href="javascript.html" onclick="return change_image(-1)"> Previous </a> </td>
+		<td align="right">  <a href="javascript:change_image(1)"> Next </a></td>
+		<td align="right">  <a href="javascript:auto()"> Auto </a></td>
+	</tr>
+
+</table>
+
+<div id="description">
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html>
+
+<head>
+
+	<script src="js/bootstrap.min.js">
+
+<link rel="shortcut icon" href="Photos/BrowniesHamburgerStand.jpg"/>
+
+
+	var image1=new Image()
+	image1.src="Photos/Adele.jpg"
+	var image2=new Image()
+	image2.src="Photos/Pizza.jpg"
+	var image3=new Image()
+	image3.src="Photos/bmw_i8 2.jpg"
+
+	</script>
+</head>
+
+hellow there peopel!!
+
+
+
+
+
+<body>
+
+<img src="Photos/Adele.jpg" name="slide" width="250" height="250">
+
+
+<script type="text/javascript">
+
+	var step=1
+	function slideit()   {
+	document.images.slide.src=eval("image"+step+".src")
+	if(step<3)
+	step++
+	else
+	step=1
+	 setTimeout("slideit()",2500)
+
+	}
+slideit()
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

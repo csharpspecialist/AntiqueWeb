@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Debugging Practice</title>
+ <script type="text/javascript">
+	function cavsList(){
+		var cavs = ['LeBron','Kyrie','KLove','Dellavadova'];
+		
+		cavs.pop();
+		cavs.push('Tristan');
+		
+		cavs.shift();
+		cavs.unshift("Jr");
+		
+		cavs.splice(0,2);
+		
+		cavs[cavs.length] = "JJohnson";
+		
+		cavs[2] = "Mo";
+		
+		cavs[8] = "Channing";
+		
+		for (var players in cavs) {
+			console.info(cavs[players]);
+		}
+		
+		for (var i = 0; i < cavs.length; i++){
+			console.info(cavs[i]);
+		}
+	}
+document.write(cavs);
+  </script>
+
+
+</head>
+<body>
+
+
+<div id="Cavaliers"></div>
+  <button onclick="cavsList();">Best Team In Eastern Conference</button>
+</body>
+</html>

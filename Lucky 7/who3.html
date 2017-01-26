@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>
+        Attempt # 4
+    </title>
+</head>
+
+<body>
+
+<h1>    This is Who Practive Page # !!!! </h1>
+<h1>    The Who Version 2 Page works great for now !!! </h1>
+<h1>    The is a working if statement !!! </h1>
+<form id="lucky" >
+    What is the amount you would like to bet?? <input name="player" type="text" size="10" >
+   <p> <button type="button" onclick="money()">  Check  </button>   </p>
+</form>
+ <!--  -->
+
+<script>
+
+function money()   {
+    var name,x,y, answer, words;
+    x=document.getElementById("lucky");
+    y=x.elements["player"].value;
+
+    if(y==15) {
+
+
+     document.getElementById("entire").innerHTML+="You have  Dollars";
+} else  {
+ document.getElementById("entire").innerHTML="U R supposed to answer 15 bucks";
+}
+
+  }
+</script>
+
+<p id="entire"> </p>
+</body>
+
+</html>

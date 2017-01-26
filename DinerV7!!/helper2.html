@@ -1,0 +1,109 @@
+
+
+<!doctype html>
+
+<head>
+<title> Moving!!!  </title>
+
+</head>
+
+
+<script>
+
+
+
+
+/*Declare variables for starting money*/
+var money = document.getElementById("money").innerHTML = money;
+ var fruits = document.getElementById("myInput").value;
+var d1;
+var d2;
+var words;
+var diceTotal ;
+var cash;
+
+
+
+/*Roll dice function*/
+function rollDice(){
+
+    /*Make sure you ain't broke*/
+    if(money != 0){
+        
+    die1 = document.getElementById("die1");
+    die2 = document.getElementById("die2");
+    
+    d1 = Math.floor(Math.random() * 6) + 1;
+    d2 = Math.floor(Math.random() * 6) + 1;
+    
+    var diceTotal = d1 + d2;
+    var cash = diceTotal - fruits;
+    die1.innerHTML = d1;
+    die2.innerHTML = d2;
+	
+    
+    luckyRoll.innerHTML = "You rolled " +d1+ " and " +d2+ " to get " +diceTotal+ ".";
+    winner.innerHTML = "You rolled " +d1+ " and " +d2+ " to get " +diceTotal+ ".";
+        if(diceTotal == 7){
+			words = "How you like them apples?";
+            luckyRoll.innerHTML += " You earned $4!";
+			winner.innerHTML += " You won $4 Bucks.";
+            var money = money + 4;
+			
+            
+        }
+        else{
+		words = "I am not a fan of orange.";
+            luckyRoll.innerHTML += " You lost $1.";
+			winner.innerHTML += " You lost $1.";
+            var money = money - 1;
+			//words = "I am not a fan of orange.";
+        }
+    /*If you're broke*/
+}else{
+    
+   // luckyRoll.innerHTML = "You have no money! Come back when you have some!"
+    document.getElementById("words").innerHTML = words;
+	winner.innerHTML = "You have no money! Come back when you have some!"
+}
+    
+}
+
+
+</script>
+
+
+
+<body>
+    
+<h1>Welcome to Lucky Sevens!</h1>
+
+<p>The game is simple! Each time you roll a combination of 7, you win $4! If you don't win a 7, you lose $1. We'll get you started with $5.</p>
+    
+    
+<button onclick="rollDice()">Roll the Dice</button>    
+    
+    
+<h2>This roll:<h2 id="die1"></h2><h2 id="die2"></h2></h2>
+<h2>Winnings: <h2 $ id="money"></h2></h2>
+
+ <p> <div id="luckyRoll"></div> </p>
+ <p> <div id="winner"></div> </p>
+ <!--   <p> <div id="cash"></div> </p> -->
+<div id="words"></div>
+<input id="myInput" type="text">
+
+    
+<script type="text/javascript" src="luckySevens.js"></script>    
+</body>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>
+        Try # 3
+    </title>
+</head>
+
+<body>
+
+<h1>    This is Who Page # 2!!!! </h1>
+<h1>    Working so far Page!!! </h1>
+<form id="lucky" >
+    What is the amount you would like to bet?? <input name="player" type="text" size="10" >
+</form>
+ <!--   -->
+<button onclick="money()">  Submit</button>
+<script>
+
+function money()   {
+    var name,x,y, answer, words;
+    x=document.getElementById("lucky");
+    y=x.elements["player"].value;
+    document.getElementById("entire").innerHTML="Are U Sure you want to bet " + y + "Dollars?? <br>";
+     document.getElementById("entire").innerHTML+="You have "+y + " Dollars";
+
+
+  }
+</script>
+
+<p id="entire"> </p>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>
+        Who Page # 4
+    </title>
+</head>
+
+<body>
+
+<h1>    This is Who Practice Page # 4 !!!! </h1>
+<h1>    The Who Version 2 Page works great for now !!! </h1>
+<h1>    The is a Random generator page !!! </h1>
+<form id="lucky" >
+    <p id="bet"></p>
+    What is the amount you would like to bet?? <input name="player" type="text" size="3" >    </p>
+    <p>  <button type="button" onclick="money()">  Check  </button>    </p>
+    <p>   <button type="button" onclick="roll()">  Roll Dice </button>   </p>
+
+</form>
+ <!--  -->
+
+<script>     function roll() {
+Ran1= Math.floor(Math.random()*20+1);
+
+document.getElementById("bet").innerHTML+="The dice have rolled " + Ran1  +  " Dollar(s)";
+           }
+
+function money()   {
+    var name,x,y, answer, words;
+    x=document.getElementById("lucky");
+    y=x.elements["player"].value;
+
+    if(y==15) {
+
+
+     document.getElementById("entire").innerHTML+="You have  Dollars";
+} else  {
+ document.getElementById("entire").innerHTML="U R supposed to answer 15 bucks";
+}
+
+  }
+</script>
+
+<p id="entire"> </p>
+</body>
+
+</html>

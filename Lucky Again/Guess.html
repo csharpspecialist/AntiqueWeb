@@ -1,0 +1,248 @@
+
+
+
+<html>
+<head>
+<title>  Go Page!!    </title>
+
+
+<body>
+<script type="text/javascript">
+
+
+
+var sval = 22;    // I have tried with these variable both inside & outside of this function..nothing!!
+var val2 = 44;  
+var ph;
+var go = ""; 
+
+var hi;
+var west; 
+var glo;
+var cat; 
+var chks;
+var hasChecked;
+
+//function goal()
+//{
+ //   if(ph == 12 || go == "Hello" )
+//    alert("get a job");
+    
+//   ph = document.getElementById("writing").value;
+//    go = document.getElementById("clever").value;
+    
+//}
+
+
+function wild()
+{
+    if(hi == "" || west == "" || glo == "" || cat == "" ) 
+    alert("World Wide People");
+    
+   hi = document.getElementById("bimbo").value;
+    west = document.getElementById("devil").value;
+     glo = document.getElementById("turk").value;
+    cat = document.getElementById("ram").value;
+    
+}
+
+
+function work () {
+ // I have tried moving this function both higher inside the script tags....nothing!!!
+
+if (sval > val2) {
+alert("u need your head examined");
+}
+else if  (sval < val2) {
+alert("good work");
+}
+else {
+alert("get Out!!!");
+}
+}
+
+function val()
+{
+     chks = document.getElementByName("chk[]");
+     hasChecked = false;
+    
+    for  (var i = 0; i < chks.length; i++)
+    {   if (chks[i].checked)  
+        {
+            hasChecked = true;
+            break;
+        }
+    
+    }  
+ 
+ if (hasChecked == false)
+ {
+     alert("You did not check a cartype");
+     return false;
+ }
+ return true;
+   
+}
+
+
+function crisp() {
+var count = 0;
+
+for (var i = 0; i< 5; i++) 
+{
+if(document.myform["days[]"][i].checked){
+count ++;
+}
+
+}
+if (count == 0)
+ {
+alert ("You must check at least 1 checkbox!");
+
+  //  else if (count == 0)
+ //   {
+  //      alert ("U Gotta Choose At least 1 checkbox...Fool!");
+        return false;
+  //  }
+
+}
+
+return true;
+}
+
+
+function space()
+{
+    			if(m.checked == false &&
+                    t.checked == false &&
+					w.checked == false &&
+					th.checked == false &&
+					f.checked == false) 
+                    {
+					alert("Please select the best day of the week to contact you.")
+				}
+                else if (m.checked == true ||
+					t.checked == true ||
+					w.checked == true ||
+					th.checked == true ||
+					f.checked == true) 
+                {
+                    alert("We R Good")
+                    
+                }
+					return false;
+}
+
+</script>
+</head>
+<body>
+        
+
+<p>You wrote: <span id='newText'></span> </p> 
+
+ <p>  <input type='text' id='writing' value='Goal Input' /> </p> 
+ 
+  <p>  <input type='text' id='clever' value='Clever Input' /> </p> 
+  
+   <p>  <input type='text' id='bimbo' value='hi Input' /> </p> 
+ 
+  <p>  <input type='text' id='devil' value='devil Input' /> </p> 
+ 
+    <p>  <input type='text' id='turk' value='turk Input' /> </p> 
+ 
+  <p>  <input type='text' id='ram' value='ramInput' /> </p>  
+  
+
+<input type='text' id='theInput' value='Write here' />
+<input type='button' onclick='changeThis()' value='See what you wrote'/>
+
+<button onclick="goal()"> Goal </button>
+
+<button onclick="wild()"> Devil</button>
+
+<button onclick="roll()">R U Lucky??</button>
+
+<button onclick="show()">Show Me The Money!!</button>
+
+<button onclick="work()"> Work...still 4 Letters!!</button> </br>   
+
+<button onclick="space()"> Space Button </button>  </br>   
+
+<p id="demo"></p>
+<p id="banner">  </p>
+<p id="message"></p>
+
+
+	<span><input type="checkbox" name="calling" value="CONTACT" id="m"></span><span> M </span>
+ 	<span><input type="checkbox" name="calling" value="CONTACT" id="t"></span><span> T </span>
+   	<span><input type="checkbox" name="calling" value="CONTACT" id="w"></span><span> W </span>
+   	<span><input type="checkbox" name="calling" value="CONTACT" id="th"></span><span> T </span>
+   	<span><input type="checkbox" name="calling" value="CONTACT" id="f"></span><span> F </span>
+	
+        
+</br>   
+<form name="myform" method="POST" action="" onsubmit="return crisp();">
+ <!--  <form  name="frm" method="POST" action="thankyou.htm" > 
+
+    Select your favorite car </br>
+    
+    <input type="checkbox" name="chk[]" value="Nissan"> Nissan </br>         
+    
+      <input type="checkbox" name="chk[]" value="Dodge"> Dodge </br>    
+      
+        <input type="checkbox" name="chk[]" value="Jaguar"> Jaguar </br>    
+    
+      <input type="checkbox" name="chk[]" value="Volvo">  Volvo  </br> -->
+      
+<input type="checkbox" name="days[]" value="1" /> 1 &nbsp;&nbsp;
+<input type="checkbox" name="days[]" value="2" /> 2 &nbsp;&nbsp;
+<input type="checkbox" name="days[]" value="3" /> 3 &nbsp;&nbsp;
+<input type="checkbox" name="days[]" value="4" /> 4 &nbsp;&nbsp;
+<input type="checkbox" name="days[]" value="5" /> 5 &nbsp;&nbsp;
+      
+      
+<input type="submit" value="Submit Form" />
+<input type="reset" value="Start Over">      
+    
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

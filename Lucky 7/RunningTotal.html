@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" 
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>untitled</title>
+<script type="text/javascript" language="javascript">
+
+function countCheckboxes(oCheckbox) {
+     var box, i = 0, total = 0, oForm = oCheckbox.form, grp = oForm.elements[oCheckbox.name];
+     while (box = grp[i++])
+            if (box.checked)
+                ++total;
+     oForm.total.value = total;
+}
+
+</script>
+</head>
+<body>
+<form>
+<input type="checkbox" name="count" id="box1" onClick="countCheckboxes(this)"> 1<br>
+<input type="checkbox" name="count" id="box2" onClick="countCheckboxes(this)"> 2<br>
+<input type="checkbox" name="count" id="box3" onClick="countCheckboxes(this)"> 3<br><br>
+<input type="text" name="total" size="3">___total
+</form>
+</body>
+</html>
+
+

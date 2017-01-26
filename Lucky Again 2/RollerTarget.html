@@ -1,0 +1,49 @@
+<html>
+<script language='JavaScript'>
+
+
+function getwords(){
+myOutput=document.getElementById('output');
+textbox = document.getElementById('words');
+if (textbox.value != "")
+
+
+
+myOutput.innerHTML="You entered: " + textbox.value;
+else
+alert("No word have been entered!")
+}
+
+<!--   -----------------------------------       -->
+
+function getwager(){
+realOutput=document.getElementById('display');
+textbox = document.getElementById('things');
+if (textbox.value != "")
+
+
+
+realOutput.innerHTML="You entered: " + textbox.value;
+else
+alert("You must enter some words...Yes We Said It!!!")
+}
+
+
+
+
+</script>
+
+
+<input type="text" id="words" />
+<input type="button" onclick="getwords()" value="Enter" />
+   
+<input type="text" id="things" />
+<input type="button" onclick="getwager()" value="Enter" />
+
+<div id="output">  </div>
+
+<div id="display">  </div>
+
+
+</body>
+</html>

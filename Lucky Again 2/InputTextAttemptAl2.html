@@ -1,0 +1,119 @@
+
+
+
+<html>
+<head>
+<title>  Show Page     </title>
+
+</head>
+<body>
+<script type="text/javascript">
+var spin;
+var die1;
+var die2;
+var wager;
+var cash;
+
+function roll() {    // works fine roll dice button
+  // get the current dice roll value property of the input
+  
+  die1 = Math.floor(Math.random()*6+1);
+  die2 = Math.floor(Math.random()*6+1);
+  spin = (die1 + die2);
+  // figure out if they win or lose money, change the balance variable as play continues
+  
+  // update this to tell the player whether the won or lost any cash
+  document.getElementById("message").innerHTML= "You rolled a " + (die1 + die2);
+};
+
+function show() {
+
+   wager = document.getElementById('theInput').value;
+   document.getElementById("banner").innerHTML= "Die 1 is a  " + (wager + cash);
+}
+
+//takes theInput of the textbox and displays it onscreen as/in newtext span
+function changeThis(){ // see what you wrote button 
+	wager = document.getElementById('theInput').value;
+	document.getElementById('newText').innerHTML = wager;
+	
+}
+
+
+function work () {
+var sval = 22;    // I have tried with these variable both inside & outside of this function..nothing!!
+var val2 = 44;   // I have tried moving this function both higher inside the script tags....nothing!!!
+
+if (sval > val2) {
+alert('u need your head examined');
+}
+else if  (sval < val2) {
+alert('good work');
+}
+else {
+alert('get Out!!!');
+}
+}
+
+
+</script>
+
+
+
+<p>Answer: <span id='result'></span> </p> 
+
+<p>You wrote: <span id='newText'></span> </p>  <!-- theInput winds up here!!! -->
+<input type='text' id='theInput' value='Write here' />   <!-- what the user types into textbox!!! -->
+<input type='button' onclick='changeThis()' value='See what you wrote'/>
+
+<button onclick="myFunction()">Try it</button>
+
+<button onclick="roll()">Roll Dice</button>
+
+<button onclick="show()">Show Me The Money!!</button>
+
+<button onclick="work()"> Work...still 4 Letters!!</button>
+
+<p id="demo"></p>
+<p id="banner">  </p>
+<p id="message"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

@@ -1,0 +1,90 @@
+
+
+<!doctype html>
+
+<head>
+<title> AWESOME!!!  </title>
+
+</head>
+
+
+<script>
+
+
+
+
+/*Declare variables for starting money*/
+var money = 5;
+var bank = document.getElementById("bank").innerHTML = money;
+var d1;
+var d2;
+/*Roll dice function*/
+function rollDice(){
+
+    /*Make sure you ain't broke*/
+    if(money != 0){
+        
+    var die1 = document.getElementById("die1");
+    var die2 = document.getElementById("die2");
+    
+    d1 = Math.floor(Math.random() * 6) + 1;
+    d2 = Math.floor(Math.random() * 6) + 1;
+    
+    var diceTotal = d1 + d2;
+    
+    die1.innerHTML = d1;
+    die2.innerHTML = d2;
+    
+    luckyRoll.innerHTML = "You rolled " +d1+ " and " +d2+ " to get " +diceTotal+ ".";
+    
+        if(d1+d2 === 7){
+            luckyRoll.innerHTML += " You earned $4!";
+            var money = money + 4;
+            
+        }
+        else{
+            luckyRoll.innerHTML += " You lost $1.";
+            var money = money - 1;
+        }
+    /*If you're broke*/
+}else{
+    
+    luckyRoll.innerHTML = "You have no money! Come back when you have some!"
+    
+}
+    
+}
+
+
+</script>
+
+
+
+<body>
+    
+<h1>Welcome to Lucky Sevens!</h1>
+
+<p>The game is simple! Each time you roll a combination of 7, you win $4! If you don't win a 7, you lose $1. We'll get you started with $5.</p>
+    
+    
+<button onclick="rollDice()">Roll the Dice</button>    
+    
+    
+<h2>This roll:<h2 id="die1"></h2><h2 id="die2"></h2></h2>
+<h2>Winnings: <h2 $ id="bank"></h2></h2>
+
+<div id="luckyRoll"></div>
+
+
+    
+<script type="text/javascript" src="luckySevens.js"></script>    
+</body>
+
+
+
+
+
+
+
+
+

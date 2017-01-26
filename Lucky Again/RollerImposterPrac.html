@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Dice Roller!!! </title>
+  <script type="text/javascript">  
+// set this to the starting balance should be
+var balance = 0;
+var wagerInput = 88;
+var diceTotal = (die1 + die2);
+
+
+function myFunction(){
+if (wagerInput > diceTotal) {
+alert("u need your head examined");
+}
+else if  (wagerInput < diceTotal) {
+alert("good work");
+}
+else {
+alert("get Out!!!");
+}
+}
+
+	 
+  var die1 = Math.floor(Math.random()*6+1);
+  var die2 = Math.floor(Math.random()*6+1);
+function roll() {
+  // get the current dice roll value property of the input
+ 
+  
+  // figure out if they win or lose money, change the balance variable as play continues
+  
+  // update this to tell the player whether the won or lost any cash
+  document.getElementById("message").innerHTML= "You rolled a " + (die1 + die2);
+};
+
+function getbalance() {
+
+	document.getElementById("message").innerHTML= "Your balance is: $" + balance;
+};
+
+function getbetAmount() {   // working function to get 
+	var wagerInput = document.getElementById('wager').value;
+	document.getElementById("bet").innerHTML = wagerInput;
+};
+
+function changeThis(){  // testing out a function
+	var formInput = document.getElementById('theInput').value;
+	document.getElementById('newText').innerHTML = formInput;
+}
+
+
+
+  </script>
+</head>
+<body>
+
+<h1>
+  Lucky Sevens
+</h1>
+<form id="lucky">
+  <p>
+    
+    <p> <input type='text' id='wager' value='Type Bet amount Here!!' />
+	
+	
+	 <input type='button' onclick='getbetAmount()' value='View Bet Amount Here!!'/>
+	Bet Amount: <span id='bet'></span> </p>
+	
+	
+	
+	<p> <input type='text' id='theInput' value='Write here' /> 
+	<input type='button' onclick='changeThis()' value='See what you wrote'/>
+		You wrote: <span id='newText'></span>   </p> 
+	
+  </p>
+  <table>
+    <tr>
+      <td>
+        <button type="button" onclick="getbalance()"> 
+          Check Balance
+        </button>
+      </td>
+      <td>
+        <button type="button" onclick="roll()">
+          Roll
+        </button>
+      </td>
+	      <td>
+        <button type="button" onclick="getbetAmount()"> 
+          Check Bet Amount
+        </button>
+      </td>
+	    <td>
+        <button type="button" onclick="myFunction()"> 
+          Check Function
+        </button>
+      </td>
+	  
+	  
+    </tr>
+  </table>
+</form>
+<p id="message">  </p>
+<p id="bet">  </p>
+
+</body>
+</html>
